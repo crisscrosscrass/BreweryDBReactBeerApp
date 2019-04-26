@@ -1,0 +1,51 @@
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    text-align: left;
+    list-style:none;
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+}
+li:hover{
+    background-color: #ddd;
+}
+span{
+    color: #fa503a;
+    vertical-align: top;
+}
+img {
+    border-radius: 50%;
+    margin: 10px;
+  }
+button{
+    color: #ffffff;
+    background: #ed5441;
+    border: 1px solid #e52d16;
+    padding: 6px 12px;
+    margin: 10px;
+    border-radius: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+button:hover{
+    color: #ed5441;
+    background: #ffffff;
+    
+}
+.leftside, .rightside{
+    height: 80vh;
+    widows: 100%;
+}
+@media screen and (min-width: 768px){
+    .leftside,.rightside{
+        height: 80vh;
+    }
+}
+.leftside{
+    overflow: auto;
+}
+.rightside{
+    
+}
