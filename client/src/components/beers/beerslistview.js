@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 function Beerlistview(props){
     const beersList = props.state.beers.map( beer => {
@@ -7,10 +8,18 @@ function Beerlistview(props){
           beerImage = beer.labels.icon;
         }  
         return <li key={beer.id} className={"" + beer.id} onClick={() => props.handleClick(beer.id)} >
-        <img src={beerImage} alt="" />
-        <span href="" >{typeof beer.name === "undefined" ? "Name: N/A " : beer.name+" "}</span> 
-        <span href="" >{typeof beer.abv === "undefined" ? "ABV: N/A " : "ABV: "+beer.abv+" "}</span>
-        <span href="" >{typeof beer.ibu === "undefined" ? "IBU: N/A " : "IBU: "+beer.ibu+" "}</span> 
+        <div className="row no-gutters">
+          <div className="image">
+            <img src={beerImage} alt="" />
+          </div>
+          <div className="col md-6 no-gutters">
+            <ul>
+              <li href="" >{typeof beer.name === "undefined" ? "Name: N/A " : beer.name+" "}</li> 
+              <li href="" >{typeof beer.abv === "undefined" ? "ABV: N/A " : "ABV: "+beer.abv+" "}</li>
+              <li href="" >{typeof beer.ibu === "undefined" ? "IBU: N/A " : "IBU: "+beer.ibu+" "}</li>
+            </ul>
+          </div>
+        </div>
         </li>
       });
       return(
